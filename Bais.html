@@ -1072,21 +1072,13 @@ $my_icon = $("#top-social-L").html(), $(".mop-icon").html($my_icon), $(".mop-lin
 </div>
 
   
-<!------------------------------------ اليـــــــــــــــــــــــــــــــــــــوم ------------------------------------>
-<!------------------------------------ اليـــــــــــــــــــــــــــــــــــــوم ------------------------------------>
-<script>//<![CDATA[
-!function(e,a,t,g,n,o){e.GoogleAnalyticsObject=g,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=+new Date,n=a.createElement(t),o=a.getElementsByTagName(t)[0],n.async=1,n.src="https://www.google-analytics.com/analytics.js",o.parentNode.insertBefore(n,o)}(window,document,"script","ga"),ga("create","UA-137036133-1","auto","blogger"),ga("blogger.send","pageview");
-function rdmode(){localStorage.setItem("mode","rdmode"===localStorage.getItem("mode")?"light":"rdmode"),"rdmode"===localStorage.getItem("mode")?document.querySelector("body").classList.add("Night"):document.querySelector("body").classList.remove("Night")};
-//]]></script>
-<script>//<![CDATA[
-!function(s){function t(){$("img["+s+"]").each(function(){var t=this.getBoundingClientRect().top-$("body")[0].getBoundingClientRect().top;if(window.pageYOffset+window.innerHeight>t){var e=Math.ceil(this.parentNode.offsetWidth),i=Math.ceil(this.parentNode.offsetHeight),n=function(t,e,i){try{t=-1!==t.indexOf("img.youtube.com")||-1!==t.indexOf("ytimg.com")?t.replace("/default","/mqdefault"):t.replace(/\/(s72\-c|s40\-c|s1600\-c|s220|s113|w1600)\//,"/w"+parseInt(e)+"-h"+i+"-p-k-nu-rw-e90/")}finally{return t}}(this.getAttribute(s),e,i);this.setAttribute("src",n),this.removeAttribute(s),$(this).parent().removeClass("PLHolder"),$(this).parent().addClass("")}})}window.addEventListener("load",t),document.addEventListener("scroll",t)}("data-img");
-//]]></script>
-
-<script src='//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src='https://cdn.statically.io/gh/yallashoot808/yalla-shoot-new/25ff629f/mmt.js'></script>
-<script src='https://cdn.statically.io/gh/yallashoot808/yalla-shoot-new/96be9fd3/timer.js'></script>
-<script>//<![CDATA[
-$(document).ready(function(){$(".match-event .match-date").each(function(){var t=$(this),a=t.data("start"),e=t.data("gameends"),m=moment(a,"YYYY-MM-DD HH:mm:ssZ"),n=moment(e,"YYYY-MM-DD HH:mm:ssZ"),e=moment.utc().format("YYYY-MM-DD HH:mm:ssZ"),m=m.diff(e,"minutes"),e=n.diff(e,"minutes");switch(!0){case 60<m:var d=moment.utc(a).toDate();t.parent().find("#match-hour").text(moment(d).format("LT")),t.parent().find(".match-date").html("لم تبدا بعد").addClass("not-start"),t.parents(".match-event").addClass("notstart");break;case 0<m:d=moment.utc(a).toDate(),t.parent().find("#match-hour").text(moment(d).format("LT")),t.parent().find(".match-date").html("بعد قليل").addClass("soon"),t.parents(".match-event").addClass("ch-soon");break;case 0<e:d=moment.utc(a).toDate(),t.parent().find(".match-date").html("جارية الآن").addClass("live"),t.parent().find("#match-hour").text(moment(d).format("LT")),t.parents(".match-event").addClass("ch-live");break;default:d=moment.utc(a).toDate(),t.parent().find("#match-hour").text(moment(d).format("LT")),t.parent().find(".match-date").html("إنتهت المباراة").addClass("end"),t.parents(".match-event").addClass("ch-end")}})});
-//]]></script>
-</body>
-</html></noscript></div></div></div></div></div></div></div></body>
+     <!----> 
+              <div class="no-match h"> 
+               <img class="img" span="" src="data:image/svg+xml;base64,
+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjMuNjI1IDIzLjYyNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjMuNjI1IDIzLjYyNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiBjbGFzcz0iIj48Zz48Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGQ9Ik0xMS44MTIsMEM1LjI4OSwwLDAsNS4yODksMCwxMS44MTJzNS4yODksMTEuODEzLDExLjgxMiwxMS44MTNzMTEuODEzLTUuMjksMTEuODEzLTExLjgxMyAgIFMxOC4zMzUsMCwxMS44MTIsMHogTTE0LjI3MSwxOC4zMDdjLTAuNjA4LDAuMjQtMS4wOTIsMC40MjItMS40NTUsMC41NDhjLTAuMzYyLDAuMTI2LTAuNzgzLDAuMTg5LTEuMjYyLDAuMTg5ICAgYy0wLjczNiwwLTEuMzA5LTAuMTgtMS43MTctMC41MzlzLTAuNjExLTAuODE0LTAuNjExLTEuMzY3YzAtMC4yMTUsMC4wMTUtMC40MzUsMC4wNDUtMC42NTljMC4wMzEtMC4yMjQsMC4wOC0wLjQ3NiwwLjE0Ny0wLjc1OSAgIGwwLjc2MS0yLjY4OGMwLjA2Ny0wLjI1OCwwLjEyNS0wLjUwMywwLjE3MS0wLjczMWMwLjA0Ni0wLjIzLDAuMDY4LTAuNDQxLDAuMDY4LTAuNjMzYzAtMC4zNDItMC4wNzEtMC41ODItMC4yMTItMC43MTcgICBjLTAuMTQzLTAuMTM1LTAuNDEyLTAuMjAxLTAuODEzLTAuMjAxYy0wLjE5NiwwLTAuMzk4LDAuMDI5LTAuNjA1LDAuMDljLTAuMjA1LDAuMDYzLTAuMzgzLDAuMTItMC41MjksMC4xNzZsMC4yMDEtMC44MjggICBjMC40OTgtMC4yMDMsMC45NzUtMC4zNzcsMS40My0wLjUyMWMwLjQ1NS0wLjE0NiwwLjg4NS0wLjIxOCwxLjI5LTAuMjE4YzAuNzMxLDAsMS4yOTUsMC4xNzgsMS42OTIsMC41MyAgIGMwLjM5NSwwLjM1MywwLjU5NCwwLjgxMiwwLjU5NCwxLjM3NmMwLDAuMTE3LTAuMDE0LDAuMzIzLTAuMDQxLDAuNjE3Yy0wLjAyNywwLjI5NS0wLjA3OCwwLjU2NC0wLjE1MiwwLjgxMWwtMC43NTcsMi42OCAgIGMtMC4wNjIsMC4yMTUtMC4xMTcsMC40NjEtMC4xNjcsMC43MzZjLTAuMDQ5LDAuMjc1LTAuMDczLDAuNDg1LTAuMDczLDAuNjI2YzAsMC4zNTYsMC4wNzksMC41OTksMC4yMzksMC43MjggICBjMC4xNTgsMC4xMjksMC40MzUsMC4xOTQsMC44MjcsMC4xOTRjMC4xODUsMCwwLjM5Mi0wLjAzMywwLjYyNi0wLjA5N2MwLjIzMi0wLjA2NCwwLjQtMC4xMjEsMC41MDYtMC4xN0wxNC4yNzEsMTguMzA3eiAgICBNMTQuMTM3LDcuNDI5Yy0wLjM1MywwLjMyOC0wLjc3OCwwLjQ5Mi0xLjI3NSwwLjQ5MmMtMC40OTYsMC0wLjkyNC0wLjE2NC0xLjI4LTAuNDkyYy0wLjM1NC0wLjMyOC0wLjUzMy0wLjcyNy0wLjUzMy0xLjE5MyAgIGMwLTAuNDY1LDAuMTgtMC44NjUsMC41MzMtMS4xOTZjMC4zNTYtMC4zMzIsMC43ODQtMC40OTcsMS4yOC0wLjQ5N2MwLjQ5NywwLDAuOTIzLDAuMTY1LDEuMjc1LDAuNDk3ICAgYzAuMzUzLDAuMzMxLDAuNTMsMC43MzEsMC41MywxLjE5NkMxNC42NjcsNi43MDMsMTQuNDksNy4xMDEsMTQuMTM3LDcuNDI5eiIgZGF0YS1vcmlnaW5hbD0iIzAzMDEwNCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAzMDEwNCI+PC9wYXRoPgo8L2c+PC9nPiA8L3N2Zz4=  "> 
+               <span class="Msg"> لا توجد مباريات لهذا اليوم . </span>
+              </div> 
+             </div> 
+            </div> 
+            <!----> 
+            <!-- Dh --> 
