@@ -1,9 +1,29 @@
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-comments" data-href="https://mosanad53.github.io/strongtv/sanad.html" data-width="470" data-num-posts="2"></div>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Comment system using php and mysql</title>
+</head>
+<body>
+<form name="comment" method="post" action="comment.php" onSubmit="return validation()">
+<table width="500" border="0" cellspacing="3" cellpadding="3" style="margin:auto;">
+  <tr>
+    <td align="right" id="one">Name :<span style="color:#F00;">*</span></td>
+    <td><input type="text" name="namename" id="tnameid"></td>
+  </tr>
+  <tr>
+    <td align="right" id="one">Work :<span style="color:#F00;">*</span></td>
+    <td><input type="text" name="job" id="tjobid"></td>
+  </tr>
+  <tr>
+    <td align="right" id="one"></td>
+    <td><textarea name="message" id="tmessageid"></textarea></td>
+  </tr>
+  <tr>
+  <td align="right" id="one"></td>
+  <td><input type="submit" name="submit" id="submit" value="Submit Comment"></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>
