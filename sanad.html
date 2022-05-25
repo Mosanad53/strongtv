@@ -1,29 +1,45 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Comment system using php and mysql</title>
-</head>
-<body>
-<form name="comment" method="post" action="comment.php" onSubmit="return validation()">
-<table width="500" border="0" cellspacing="3" cellpadding="3" style="margin:auto;">
-  <tr>
-    <td align="right" id="one">Name :<span style="color:#F00;">*</span></td>
-    <td><input type="text" name="namename" id="tnameid"></td>
-  </tr>
-  <tr>
-    <td align="right" id="one">Work :<span style="color:#F00;">*</span></td>
-    <td><input type="text" name="job" id="tjobid"></td>
-  </tr>
-  <tr>
-    <td align="right" id="one"></td>
-    <td><textarea name="message" id="tmessageid"></textarea></td>
-  </tr>
-  <tr>
-  <td align="right" id="one"></td>
-  <td><input type="submit" name="submit" id="submit" value="Submit Comment"></td>
-  </tr>
-</table>
-</form>
-</body>
-</html>
+/*
+Widget: Recent Comment Widget for Blogger
+Author: Ahmed Saleh
+URL: https://a2z-bloggers.blogspot.com
+*/
+a.a2z-srcbw{
+ color:#333333; /*لون نص التعليق*/
+ border-top:1px solid #cccccc; /* لون الحدود في القطعة */
+ display:block;
+ padding:1em 1.5em;
+ position:relative
+}
+.a2z-srcbw-icon-comment{position:absolute;left:0;top:1.1em}
+.a2z-srcbw-icon-arrow{
+ color:#2271b1; /* لون السهم الموجود بجوار نهاية التعليق */
+    position:absolute;
+    right:0;
+    font-size:200%;
+    top:50%;
+    margin-top:-0.55em
+}
+.a2z-srcbw-credit{
+ font-size:90%;
+ text-align:right;
+ padding:1em 0;
+ display:block;/* إخفاء او اظهار حقوق القطعة */
+ border-top: 1px solid #cccccc; /* لون الحدود في القطعة */
+}
+#a2z-srcbw-exclude{display:none!important}
+html[dir="rtl"] .a2z-srcbw-icon-comment{right:0;left:auto}
+html[dir="rtl"] .a2z-srcbw-icon-arrow{left:0;right:auto}
+html[dir="rtl"] .a2z-srcbw-credit {
+ text-align: right;/* لجعل الحقوق على اليمين او على اليسار */
+}
+
+
+
+ // settings
+ var a2z_srcbw_count = 3; // عدد التعليقات
+ var a2z_srcbw_summary_length = 50; // طول عدد أحرف الملخص
+ var a2z_srcbw_icon_comment = 'fa-comment'; // ايقونة التعليق
+ var a2z_srcbw_icon_arrow = 'fa-angle-left'; // ايقونة السهم بجوار التعليق
+ _s7GpE = ['link','href','font-awesome','link','text/css','stylesheet','https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css','a2z-srcbw-exclude','\n','string','undefined','feed','entry','لم يتم العثور على اي تعليقات',' ...','','','alternate','self','#','/','#c','',': ','','جميع الحقوق محفوظة a2zBlogger',''];var _vHpF=document.getElementsByTagName(_s7GpE[0]);for(var _vLbB=0;_vLbB=_vHpF.length){var _vLbJ=document.createElement(_s7GpE[3]);_vLbJ.type=_s7GpE[4];_vLbJ.rel=_s7GpE[5];_vLbJ.href=_s7GpE[6];document.head.appendChild(_vLbJ);}var _vRqN=document.getElementById(_s7GpE[7]).innerHTML;var _vSbX=a2z_srcbw_count;_vRqN=_vRqN.trim();if(_vRqN){_vRqN=_vRqN.split(_s7GpE[8]);_vSbX=_vSbX*(_vRqN.length+2);}function _fCiE(json){if(typeof(json)==_s7GpE[9]||typeof(json)==_s7GpE[10]||!(_s7GpE[11] in json)||!(_s7GpE[12] in json.feed)||!json.feed.entry.length){document.write(_s7GpE[13]);return;}var _vQbX=0;for(var _vLbB=0;_vLbB<json.feed.entry.length&&_vQbXa2z_srcbw_summary_length){_vRcD=_vRcD.substring(0,a2z_srcbw_summary_length)+_s7GpE[14];}var _vVgK=_s7GpE[15];var _vVeS=_s7GpE[16];for(var _vIlN=0;_vIlN<_vOlU.link.length;_vIlN++){var _vLbJ=_vOlU.link[_vIlN];if(_s7GpE[17]==_vLbJ.rel){_vVgK=_vLbJ.href;}else if(_s7GpE[18]==_vLbJ.rel){_vVeS=_vLbJ.href;}}if(!_vVgK){continue;}if(_vVgK.indexOf(_s7GpE[19])==-1){_vVeS=_vVeS.split(_s7GpE[20]);_vVeS=_vVeS[_vVeS.length-1];_vVgK+=(_s7GpE[21]+_vVeS);}document.write(_s7GpE[22]+_vVgK+_s7GpE[23]+a2z_srcbw_icon_comment+_s7GpE[24]+_vQjW+_s7GpE[25]+_vRcD+_s7GpE[26]+a2z_srcbw_icon_arrow+_s7GpE[27]);}document.write(_s7GpE[28]);}document.write(_s7GpE[29]+_vSbX+_s7GpE[30]);
+
+ 
