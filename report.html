@@ -1,0 +1,17 @@
+<form>
+  <label for="message">رسالة:</label>
+  <input type="text" id="message" name="message" dir="rtl">
+  <button type="button" onclick="sendMessage()">إرسال</button>
+</form>
+
+<div id="confirmation"></div>
+
+<script>
+function sendMessage() {
+  var message = document.getElementById("message").value;
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://api.telegram.org/bot6110797077:AAG4j-6pq2dOyAfQkdqQOfflxuakc9wdwXM/sendMessage?chat_id=5572546444&text=" + message, true);
+  xhr.send();
+  document.getElementById("confirmation").innerHTML = "تم إرسال الرسالة بنجاح!";
+}
+</script>
