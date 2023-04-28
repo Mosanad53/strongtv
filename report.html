@@ -1,5 +1,45 @@
+<style>
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+button[type="button"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+#confirmation {
+  font-size: 20px;
+  margin-top: 20px;
+}
+</style>
+
 <form>
-  <label for="message">رسالة:</label>
+  <label for="name">الاسم:</label>
+  <input type="text" id="name" name="name" dir="rtl">
+  <label for="message">الرسالة:</label>
   <input type="text" id="message" name="message" dir="rtl">
   <button type="button" onclick="sendMessage()">إرسال</button>
 </form>
@@ -8,9 +48,10 @@
 
 <script>
 function sendMessage() {
+  var name = document.getElementById("name").value;
   var message = document.getElementById("message").value;
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.telegram.org/bot6110797077:AAG4j-6pq2dOyAfQkdqQOfflxuakc9wdwXM/sendMessage?chat_id=5572546444&text=" + message, true);
+  xhr.open("GET", "https://api.telegram.org/bot6110797077:AAG4j-6pq2dOyAfQkdqQOfflxuakc9wdwXM/sendMessage?chat_id=5572546444&text=" + name + ": " + message, true);
   xhr.send();
   document.getElementById("confirmation").innerHTML = "تم إرسال الرسالة بنجاح!";
 }
