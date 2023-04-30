@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>تحويل الصور إلى خلفية بيضاء</title>
+ <style>
+  #image-preview {
+   background-color: #fff;
+   padding: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   display: none;
+   max-width: 100%;
+   height: auto;
+  }
+  #image-preview img {
+   background-color: #fff;
+  }
+ </style>
+</head>
+<body>
+ <input type="file" id="image-input">
+ <button id="convert-btn">تحويل الصورة</button>
+ <div id="image-preview"></div>
+
+ <script>
+  const imageInput = document.getElementById('image-input');
+  const convertBtn = document.getElementById('convert-btn');
+  const imagePreview = document.getElementById('image-preview');
+
+  convertBtn.addEventListener('click', function() {
+   const file = imageInput.files[0];
+   const formData = new FormData();
+   formData.append('image_file', file);
+   formData.append('size', 'auto');
+   formData.append('bg_color', 'white');
+
+   fetch('https://api.remove.bg/v1.0/removebg', {
+    method: 'POST',
+    headers: {
+     'X-Api-Key': 'AeNNDCTy9qSFa9psaokGmqvx'
+    },
+    body: formData
+   })
+   .then(response => response.blob())
+   .then(blob => {
+    const objectURL = URL.createObjectURL(blob);
+    const img = new Image();
+    img.src = objectURL;
+    img.onload = function() {
+     const link = document.createElement('a');
+     link.href = objectURL;
+     link.download = file.name.replace(/\.[^/.]+$/, "") + '_white_bg.png';
+     link.innerHTML = 'تحميل الصورة';
+     imagePreview.innerHTML = '';
+     imagePreview.appendChild(link);
+     imagePreview.appendChild(img);
+     imagePreview.style.display = 'block';
+    };
+   })
+   .catch(error => console.log(error));
+  });
+ </script>
+</body>
+</html>
