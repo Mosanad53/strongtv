@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>مشغل فيديو</title>
+ <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
+ <script src="https://vjs.zencdn.net/7.14.3/video.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+ <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="264" data-setup='{}'>
+  <source src="https://tv.chachatv.me/live/chacha033/plus051/219.ts" type="application/x-mpegURL">
+ </video>
+
+ <script>
+  // تمكين دعم ملفات .ts
+  if (videojs.Html5HlsjsEngine.isSupported()) {
+   var player = videojs('my-video', {
+    plugins: {
+     videoJsResolutionSwitcher: {
+      default: 'low',
+      dynamicLabel: true
+     }
+    },
+    html5: {
+     hlsjsConfig: {
+      enableWorker: true,
+      enableSoftwareAES: true,
+      debug: true
+     }
+    }
+   });
+<script>
+  // تعيين user agent خاص بك
+  videojs.Hls.xhr.beforeRequest = function(options) {
+   options.headers = options.headers || {};
+   options.headers['User-Agent'] = 'com.dramalive23';
+   return options;
+  };
+ </script>
+</body>
+</html>
+
+   player.play();
+  } else {
+   console.warn('HLS.js is not supported');
+  }
+ </script>
+</body>
+</html>
